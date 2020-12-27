@@ -4,6 +4,13 @@ import (
 	"fmt"
 )
 
+func reverse(str string) (result string) {
+	for _, v := range str {
+		result = string(v) + result
+	}
+	return
+}
+
 // Main function
 func main() {
 
@@ -11,8 +18,9 @@ func main() {
 	str := "Geeks"
 
 	// returns the reversed string.
-	strRev := pack2.reverse(str)
+	strRev := reverse(str)
 	fmt.Println(str)
 	fmt.Println(strRev)
+
 	fmt.Println("!... Hello World ...!")
 }
